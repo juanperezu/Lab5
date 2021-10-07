@@ -5,6 +5,7 @@ public class Usuarios {
     private String id = "";
     private String clave = "";
     private String nombre = "";
+    
     public String getNombre() {
         return nombre;
     }

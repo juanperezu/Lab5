@@ -96,11 +96,13 @@ public class Login extends JFrame implements ActionListener {
 
         miUsuario.setId(u);
         miUsuario.setClave(c);
-        if (miUsuario.getValidarUsuario()) {
+        if (miUsuario.getValidarUsuario()) {// true
             setTitle("Bienvenido " + miUsuario.getNombre());
-            new Menu();
+            Menu  m = new Menu(miUsuario.getNombre());   
+                 m.lblusuario.setText(m.lblusuario.getText()+ " otro texto static" );
+            hide();
         } else {
-            setTitle("Error ");
+            setTitle("Error ");// false
 
         }
 

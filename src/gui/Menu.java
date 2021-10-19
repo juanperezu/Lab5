@@ -41,6 +41,7 @@ public class Menu extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent boton) {
         if (boton.getSource() == btn1) {
             System.out.println("btn1");
+          MostrarArreglo a = new MostrarArreglo();  
         }
         if (boton.getSource() == btn2) {
             System.out.println("btn2");

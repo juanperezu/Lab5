@@ -11,7 +11,7 @@ public class MostrarArreglo {
     Arreglo arreglo;// objeto de tipo arreglo
 
     public MostrarArreglo() {
-        String menu = ("\t\t Bienvenido .\n 1.Cargar Un arreglo.\n 2.Mostrar Un arreglo.\n 3.Buscar.\n 4.Regresar.\n");
+        String menu = ("\t\t Bienvenido .\n 1.Cargar Un arreglo.\n 2.Mostrar Un arreglo.\n 3.Buscar.\n 4.Modificar.\n 5.Regresar.\n");
         do {
             opcion = Byte.parseByte(JOptionPane.showInputDialog(menu));
             switch (opcion) {
@@ -36,13 +36,19 @@ public class MostrarArreglo {
                 + arreglo.getDatos(pos));   
                 break;
                 case 4:
+                String dato="",nuevodato="";
+                dato =JOptionPane.showInputDialog("Ingrese el dato a modificar");
+               nuevodato =JOptionPane.showInputDialog("Ingrese el Nuevo dato");
+                arreglo.setModificar(dato, nuevodato);
                     break;
+                case 5:
+                break;    
                 default:
                 JOptionPane.showMessageDialog(null,"Error 1,2,3 ó 4");
                 break;    
 
             }// fin case
 
-        } while (opcion != 4);
+        } while (opcion != 5);
     } // fin constructor
 }// fin clase

@@ -29,5 +29,14 @@ public String getDatos(int pos){
     return ("El dato es "+llenar+"\n");
     }
 
+ public void setModificar(String dato,String nuevodado) {
+ for (int i=0; i<datos.length; i++){
+     if (datos[i].equals(dato)){
+        datos[i] = nuevodado;
+        i=datos.length;
+     }
+ } 
+
+ }   
 
 }// fin de la clase arreglo
